@@ -38,7 +38,7 @@ public class Handler {
 	public void removeObject(GameObject object) {
 		this.object.remove(object);
 	}
-
+	//Creating a temporary level with blocks for testing purposes
 	public void createLevel() {
 		// Create Bottom Section
 		for (int x = 0; x <= Game.WIDTH; x += 32) {

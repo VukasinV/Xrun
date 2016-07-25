@@ -38,20 +38,20 @@ public class Handler {
 	public void removeObject(GameObject object) {
 		this.object.remove(object);
 	}
-	//Creating a temporary level with blocks for testing purposes
+
+	// Creating a temporary level with blocks for testing purposes
 	public void createLevel() {
 		// Create Bottom Section
-		for (int x = 0; x <= Game.WIDTH; x += 32) {
+		for (int x = 0; x < Game.WIDTH * 2; x += 32) {
 			addObject(new Block(x, Game.HEIGHT - 32, ObjectId.Block));
 		}
+		// Second row of block for jumping
+		for (int x = 200; x < 600; x += 32) {
+			addObject(new Block(x, 400, ObjectId.Block));
+		}
 		// Create Left Section
-		for (int y = 0; y <= Game.HEIGHT - 36; y += 32) {
+		for (int y = 0; y < Game.HEIGHT + 32; y += 32) {
 			addObject(new Block(0, y, ObjectId.Block));
 		}
-		// Create Right Section
-		for (int y = 0; y <= Game.HEIGHT - 36; y += 32) {
-			addObject(new Block(Game.WIDTH - 32, y, ObjectId.Block));
-		}
-
 	}
 }

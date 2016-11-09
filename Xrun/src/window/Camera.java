@@ -12,7 +12,7 @@ public class Camera {
 	}
 	
 	public void tick (GameObject player) {
-		x--;
+		x = player.getX() + Game.WIDTH/2;
 	}
 
 	public double getX() {
